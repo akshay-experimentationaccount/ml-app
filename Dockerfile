@@ -4,5 +4,8 @@ WORKDIR /app
 COPY . /app
 
 RUN pip install -r requirements.txt
+# Train the model and generate model.pkl
+RUN python model.py
+
 EXPOSE 5000
 CMD ["python", "app.py"]
