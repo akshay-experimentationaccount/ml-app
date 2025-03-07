@@ -9,6 +9,11 @@ pipeline {
     }
 
     stages {
+        stage('Cleanup') {
+            steps {
+                cleanWs() // Cleans up the workspace before starting
+            }
+        }
         stage('Clone Repository') {
             steps {
                 sh "git clone ${GIT_REPO} --branch main ml-app"
