@@ -25,11 +25,10 @@ pipeline {
 
         stage('Setup Virtual Environment') {
             steps {
-                bash '''
-                cd ml-app
-                python3 -m venv ${VENV_DIR}
-                source ${VENV_DIR}/bin/activate
-                pip install --upgrade pip
+                sh '''
+                    cd ml-app
+                    python3 -m venv venv
+                    . venv/bin/activate || source venv/bin/activate
                 '''
             }
         }
