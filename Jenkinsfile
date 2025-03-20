@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         GIT_USERNAME = "akshay-experimentationaccount"
-        GIT_PAT = "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"  // Replace with actual GitHub PAT
+        GIT_PAT = "******"  // Replace with actual GitHub PAT
         GIT_REPO = "https://${GIT_USERNAME}:${GIT_PAT}@github.com/${GIT_USERNAME}/ml-app.git"
         VENV_DIR = "venv"  // Virtual environment directory
     }
